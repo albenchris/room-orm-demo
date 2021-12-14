@@ -17,9 +17,11 @@ interface WordDao {
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     fun getAlphabetizedWords(): Flow<List<Word>>
 
+    // removed suspend due to errors
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(word: Word)
+    fun insert(word: Word)
 
+    // removed suspend due to errors
     @Query("DELETE FROM word_table")
-    suspend fun deleteAll()
+    fun deleteAll()
 }
