@@ -3,4 +3,6 @@
 
     <dimen name="big_padding">16dp</dimen>
 
+    <dimen name="min_height">48dp</dimen>
+
 </resources>
